@@ -5,20 +5,32 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Server.Kestrel.Core;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.OpenApi.Models;
+using Swashbuckle.AspNetCore.SwaggerGen;
 
 namespace Endpoints
 {
     public class Startup
     {
-        // This method gets called by the runtime. Use this method to add services to the container.
-        // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
+        private const string TitleApi = "MT Code Challenge Api";
+        private const string VersionTag = "v1";
+
+        public Startup(IConfiguration configuration) => Configuration = configuration;
+
+        private IConfiguration Configuration { get; }
+
         public void ConfigureServices(IServiceCollection services)
         {
-        }
+            services.Configure<KestrelServerOptions>(Configuration.GetSection("Kestrel"));
+            services.AddSwaggerGen(SetSwaggerOption);
+            services.AddControllers().AddNewtonsoftJson(options => options.SerializerSettings.Converters.Add(new Newtonsoft.Json.Converters.StringEnumConverter()));
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        }
+        
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
@@ -26,15 +38,21 @@ namespace Endpoints
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseSwagger();
+            app.UseSwaggerUI(c => { c.SwaggerEndpoint("/swagger/v1/swagger.json", $"{TitleApi} {VersionTag}"); });
+            //app.UseHttpsRedirection();
             app.UseRouting();
-
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapGet("/", async context =>
-                {
-                    await context.Response.WriteAsync("Hello World!");
-                });
-            });
+            app.UseCors();
+            //app.UseAuthentication();
+            //app.UseAuthorization();
+            app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
         }
+        
+        private void SetSwaggerOption(SwaggerGenOptions swaggerOptions)
+        {
+            swaggerOptions.SwaggerDoc("v1", new OpenApiInfo { Title = TitleApi, Version = VersionTag });
+            swaggerOptions.OrderActionsBy(api => api.HttpMethod);
+        }
+
     }
 }
