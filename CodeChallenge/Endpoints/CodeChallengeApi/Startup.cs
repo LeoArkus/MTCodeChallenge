@@ -1,10 +1,6 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using CodeChallengeBootstrap;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Server.Kestrel.Core;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -26,6 +22,9 @@ namespace Endpoints
         public void ConfigureServices(IServiceCollection services)
         {
             services.Configure<KestrelServerOptions>(Configuration.GetSection("Kestrel"));
+
+            services.AddScoped<IBootstrapperCodeReview, BootstrapperCodeReview>();
+            
             services.AddSwaggerGen(SetSwaggerOption);
             services.AddControllers().AddNewtonsoftJson(options => options.SerializerSettings.Converters.Add(new Newtonsoft.Json.Converters.StringEnumConverter()));
 
@@ -40,11 +39,8 @@ namespace Endpoints
 
             app.UseSwagger();
             app.UseSwaggerUI(c => { c.SwaggerEndpoint("/swagger/v1/swagger.json", $"{TitleApi} {VersionTag}"); });
-            //app.UseHttpsRedirection();
             app.UseRouting();
             app.UseCors();
-            //app.UseAuthentication();
-            //app.UseAuthorization();
             app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
         }
         
