@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/leo/MindTeams/MTCodeChallenge/CodeChallenge/EndpointsApi/EndpointsApi.csproj": {}
+    "/home/leo/MindTeams/MTCodeChallenge/CodeChallenge/Endpoints/CodeChallengeApi/EndpointsApi.csproj": {}
   },
   "projects": {
-    "/home/leo/MindTeams/MTCodeChallenge/CodeChallenge/EndpointsApi/EndpointsApi.csproj": {
+    "/home/leo/MindTeams/MTCodeChallenge/CodeChallenge/Endpoints/CodeChallengeApi/EndpointsApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/leo/MindTeams/MTCodeChallenge/CodeChallenge/EndpointsApi/EndpointsApi.csproj",
+        "projectUniqueName": "/home/leo/MindTeams/MTCodeChallenge/CodeChallenge/Endpoints/CodeChallengeApi/EndpointsApi.csproj",
         "projectName": "EndpointsApi",
-        "projectPath": "/home/leo/MindTeams/MTCodeChallenge/CodeChallenge/EndpointsApi/EndpointsApi.csproj",
+        "projectPath": "/home/leo/MindTeams/MTCodeChallenge/CodeChallenge/Endpoints/CodeChallengeApi/EndpointsApi.csproj",
         "packagesPath": "/home/leo/.nuget/packages/",
-        "outputPath": "/home/leo/MindTeams/MTCodeChallenge/CodeChallenge/EndpointsApi/obj/",
+        "outputPath": "/home/leo/MindTeams/MTCodeChallenge/CodeChallenge/Endpoints/CodeChallengeApi/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/leo/.nuget/NuGet/NuGet.Config"

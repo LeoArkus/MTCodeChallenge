@@ -24,25 +24,44 @@
         "runtime": {
           "bin/placeholder/Domain.dll": {}
         }
+      },
+      "Engine/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Commons": "1.0.0",
+          "Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Engine.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Engine.dll": {}
+        }
       }
     }
   },
   "libraries": {
     "Commons/1.0.0": {
       "type": "project",
-      "path": "../Commons/Commons.csproj",
-      "msbuildProject": "../Commons/Commons.csproj"
+      "path": "../../../Commons/Commons.csproj",
+      "msbuildProject": "../../../Commons/Commons.csproj"
     },
     "Domain/1.0.0": {
       "type": "project",
-      "path": "../Domain/Domain.csproj",
-      "msbuildProject": "../Domain/Domain.csproj"
+      "path": "../../../Domain/Domain.csproj",
+      "msbuildProject": "../../../Domain/Domain.csproj"
+    },
+    "Engine/1.0.0": {
+      "type": "project",
+      "path": "../../../Engine/Engine.csproj",
+      "msbuildProject": "../../../Engine/Engine.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
-      "Commons >= 1.0.0",
-      "Domain >= 1.0.0"
+      "Domain >= 1.0.0",
+      "Engine >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -51,11 +70,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/leo/MindTeams/MTCodeChallenge/Engine/Engine.csproj",
-      "projectName": "Engine",
-      "projectPath": "/home/leo/MindTeams/MTCodeChallenge/Engine/Engine.csproj",
+      "projectUniqueName": "/home/leo/MindTeams/MTCodeChallenge/CodeChallenge/Endpoints/CodeChallengeBootstrap/CodeChallengeBootstrap.csproj",
+      "projectName": "CodeChallengeBootstrap",
+      "projectPath": "/home/leo/MindTeams/MTCodeChallenge/CodeChallenge/Endpoints/CodeChallengeBootstrap/CodeChallengeBootstrap.csproj",
       "packagesPath": "/home/leo/.nuget/packages/",
-      "outputPath": "/home/leo/MindTeams/MTCodeChallenge/Engine/obj/",
+      "outputPath": "/home/leo/MindTeams/MTCodeChallenge/CodeChallenge/Endpoints/CodeChallengeBootstrap/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/leo/.nuget/NuGet/NuGet.Config"
@@ -70,11 +89,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "/home/leo/MindTeams/MTCodeChallenge/Commons/Commons.csproj": {
-              "projectPath": "/home/leo/MindTeams/MTCodeChallenge/Commons/Commons.csproj"
-            },
             "/home/leo/MindTeams/MTCodeChallenge/Domain/Domain.csproj": {
               "projectPath": "/home/leo/MindTeams/MTCodeChallenge/Domain/Domain.csproj"
+            },
+            "/home/leo/MindTeams/MTCodeChallenge/Engine/Engine.csproj": {
+              "projectPath": "/home/leo/MindTeams/MTCodeChallenge/Engine/Engine.csproj"
             }
           }
         }

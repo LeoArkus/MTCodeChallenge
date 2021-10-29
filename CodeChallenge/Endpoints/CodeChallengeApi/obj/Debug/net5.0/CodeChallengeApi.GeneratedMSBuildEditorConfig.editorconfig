@@ -7,4 +7,4 @@ build_property.PublishSingleFile =
 build_property.IncludeAllContentForSelfExtract = 
 build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
 build_property.RootNamespace = Endpoints
-build_property.ProjectDir = /home/leo/MindTeams/MTCodeChallenge/CodeChallenge/EndpointsApi/
+build_property.ProjectDir = /home/leo/MindTeams/MTCodeChallenge/CodeChallenge/Endpoints/CodeChallengeApi/

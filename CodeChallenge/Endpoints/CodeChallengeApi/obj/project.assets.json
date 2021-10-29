@@ -2,6 +2,20 @@
   "version": 3,
   "targets": {
     "net5.0": {
+      "CodeChallengeBootstrap/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Domain": "1.0.0",
+          "Engine": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CodeChallengeBootstrap.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CodeChallengeBootstrap.dll": {}
+        }
+      },
       "Commons/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -24,23 +38,48 @@
         "runtime": {
           "bin/placeholder/Domain.dll": {}
         }
+      },
+      "Engine/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Commons": "1.0.0",
+          "Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Engine.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Engine.dll": {}
+        }
       }
     }
   },
   "libraries": {
+    "CodeChallengeBootstrap/1.0.0": {
+      "type": "project",
+      "path": "../CodeChallengeBootstrap/CodeChallengeBootstrap.csproj",
+      "msbuildProject": "../CodeChallengeBootstrap/CodeChallengeBootstrap.csproj"
+    },
     "Commons/1.0.0": {
       "type": "project",
-      "path": "../Commons/Commons.csproj",
-      "msbuildProject": "../Commons/Commons.csproj"
+      "path": "../../../Commons/Commons.csproj",
+      "msbuildProject": "../../../Commons/Commons.csproj"
     },
     "Domain/1.0.0": {
       "type": "project",
-      "path": "../Domain/Domain.csproj",
-      "msbuildProject": "../Domain/Domain.csproj"
+      "path": "../../../Domain/Domain.csproj",
+      "msbuildProject": "../../../Domain/Domain.csproj"
+    },
+    "Engine/1.0.0": {
+      "type": "project",
+      "path": "../../../Engine/Engine.csproj",
+      "msbuildProject": "../../../Engine/Engine.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "CodeChallengeBootstrap >= 1.0.0",
       "Commons >= 1.0.0",
       "Domain >= 1.0.0"
     ]
@@ -51,11 +90,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/leo/MindTeams/MTCodeChallenge/Engine/Engine.csproj",
-      "projectName": "Engine",
-      "projectPath": "/home/leo/MindTeams/MTCodeChallenge/Engine/Engine.csproj",
+      "projectUniqueName": "/home/leo/MindTeams/MTCodeChallenge/CodeChallenge/Endpoints/CodeChallengeApi/CodeChallengeApi.csproj",
+      "projectName": "CodeChallengeApi",
+      "projectPath": "/home/leo/MindTeams/MTCodeChallenge/CodeChallenge/Endpoints/CodeChallengeApi/CodeChallengeApi.csproj",
       "packagesPath": "/home/leo/.nuget/packages/",
-      "outputPath": "/home/leo/MindTeams/MTCodeChallenge/Engine/obj/",
+      "outputPath": "/home/leo/MindTeams/MTCodeChallenge/CodeChallenge/Endpoints/CodeChallengeApi/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/leo/.nuget/NuGet/NuGet.Config"
@@ -70,6 +109,9 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
+            "/home/leo/MindTeams/MTCodeChallenge/CodeChallenge/Endpoints/CodeChallengeBootstrap/CodeChallengeBootstrap.csproj": {
+              "projectPath": "/home/leo/MindTeams/MTCodeChallenge/CodeChallenge/Endpoints/CodeChallengeBootstrap/CodeChallengeBootstrap.csproj"
+            },
             "/home/leo/MindTeams/MTCodeChallenge/Commons/Commons.csproj": {
               "projectPath": "/home/leo/MindTeams/MTCodeChallenge/Commons/Commons.csproj"
             },
@@ -99,6 +141,9 @@
         "assetTargetFallback": true,
         "warn": true,
         "frameworkReferences": {
+          "Microsoft.AspNetCore.App": {
+            "privateAssets": "none"
+          },
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }

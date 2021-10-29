@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/leo/MindTeams/MTCodeChallenge/CodeChallenge/EndpointsApi/EndpointsApi.csproj",
-      "projectName": "EndpointsApi",
-      "projectPath": "/home/leo/MindTeams/MTCodeChallenge/CodeChallenge/EndpointsApi/EndpointsApi.csproj",
+      "projectUniqueName": "/home/leo/MindTeams/MTCodeChallenge/Commons/Commons.csproj",
+      "projectName": "Commons",
+      "projectPath": "/home/leo/MindTeams/MTCodeChallenge/Commons/Commons.csproj",
       "packagesPath": "/home/leo/.nuget/packages/",
-      "outputPath": "/home/leo/MindTeams/MTCodeChallenge/CodeChallenge/EndpointsApi/obj/",
+      "outputPath": "/home/leo/MindTeams/MTCodeChallenge/Commons/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/leo/.nuget/NuGet/NuGet.Config"
@@ -54,9 +54,6 @@
         "assetTargetFallback": true,
         "warn": true,
         "frameworkReferences": {
-          "Microsoft.AspNetCore.App": {
-            "privateAssets": "none"
-          },
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
