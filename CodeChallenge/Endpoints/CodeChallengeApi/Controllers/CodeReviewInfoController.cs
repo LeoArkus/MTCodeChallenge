@@ -10,7 +10,7 @@ namespace Endpoints.Controllers
     {
         private readonly IProcessCodeReview _process;
 
-        public CodeReviewInfoController(IBootstrapperCodeReview bootstrap) => _process = bootstrap.BootstrapCodeReviewInfo();
+        public CodeReviewInfoController(IBootstrapCodeReview bootstrap) => _process = bootstrap.BootstrapCodeReviewInfoProcess();
 
         [HttpGet]
         public IActionResult CodeReviewInfo() => Ok(_process.ReadCodeReviewInfo());

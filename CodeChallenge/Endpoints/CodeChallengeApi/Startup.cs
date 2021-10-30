@@ -23,7 +23,8 @@ namespace Endpoints
         {
             services.Configure<KestrelServerOptions>(Configuration.GetSection("Kestrel"));
 
-            services.AddScoped<IBootstrapperCodeReview, BootstrapperCodeReview>();
+            services.AddScoped<IBootstrapCodeReview, BootstrapCodeReview>();
+            services.AddScoped<IBootstrapAccessModifiers, BootstrapAccessModifiers>();
             
             services.AddSwaggerGen(SetSwaggerOption);
             services.AddControllers().AddNewtonsoftJson(options => options.SerializerSettings.Converters.Add(new Newtonsoft.Json.Converters.StringEnumConverter()));
