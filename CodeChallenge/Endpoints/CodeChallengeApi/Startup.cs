@@ -1,3 +1,4 @@
+using System.Text.Json.Serialization;
 using CodeChallengeBootstrap;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -25,9 +26,10 @@ namespace Endpoints
 
             services.AddScoped<IBootstrapCodeReview, BootstrapCodeReview>();
             services.AddScoped<IBootstrapAccessModifiers, BootstrapAccessModifiers>();
-            
+            services.AddScoped<IBootstrapArchitecturePattern, BootstrapArchitecturePattern>();
+
+            services.AddControllers().AddJsonOptions(options => options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter()));
             services.AddSwaggerGen(SetSwaggerOption);
-            services.AddControllers().AddNewtonsoftJson(options => options.SerializerSettings.Converters.Add(new Newtonsoft.Json.Converters.StringEnumConverter()));
 
         }
         
