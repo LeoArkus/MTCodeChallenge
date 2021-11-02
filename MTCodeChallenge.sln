@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeChallengeApi", "CodeCha
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeChallengeBootstrap", "CodeChallenge\Endpoints\CodeChallengeBootstrap\CodeChallengeBootstrap.csproj", "{0E58731A-1495-4A03-ABB2-65572FA7FCE7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EngineTests", "EngineTests\EngineTests.csproj", "{0C85DF95-63D4-4E5E-977E-2178CF644FBD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -95,5 +97,17 @@ Global
 		{0E58731A-1495-4A03-ABB2-65572FA7FCE7}.Release|x64.Build.0 = Release|Any CPU
 		{0E58731A-1495-4A03-ABB2-65572FA7FCE7}.Release|x86.ActiveCfg = Release|Any CPU
 		{0E58731A-1495-4A03-ABB2-65572FA7FCE7}.Release|x86.Build.0 = Release|Any CPU
+		{0C85DF95-63D4-4E5E-977E-2178CF644FBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C85DF95-63D4-4E5E-977E-2178CF644FBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C85DF95-63D4-4E5E-977E-2178CF644FBD}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{0C85DF95-63D4-4E5E-977E-2178CF644FBD}.Debug|x64.Build.0 = Debug|Any CPU
+		{0C85DF95-63D4-4E5E-977E-2178CF644FBD}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0C85DF95-63D4-4E5E-977E-2178CF644FBD}.Debug|x86.Build.0 = Debug|Any CPU
+		{0C85DF95-63D4-4E5E-977E-2178CF644FBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C85DF95-63D4-4E5E-977E-2178CF644FBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C85DF95-63D4-4E5E-977E-2178CF644FBD}.Release|x64.ActiveCfg = Release|Any CPU
+		{0C85DF95-63D4-4E5E-977E-2178CF644FBD}.Release|x64.Build.0 = Release|Any CPU
+		{0C85DF95-63D4-4E5E-977E-2178CF644FBD}.Release|x86.ActiveCfg = Release|Any CPU
+		{0C85DF95-63D4-4E5E-977E-2178CF644FBD}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
