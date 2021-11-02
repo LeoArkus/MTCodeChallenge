@@ -30,6 +30,7 @@ namespace Endpoints
             services.AddScoped<IBootstrapDesignPattern, BootstrapDesignPattern>();
             services.AddScoped<IBootstrapSolidPrinciples, BootstrapSolidPrinciples>();
             services.AddScoped<IBootstrapOOP, BootstrapOOP>();
+            services.AddScoped<IBootstrapApiWeb, BootstrapApiWeb>();
 
             services.AddControllers().AddJsonOptions(options => options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter()));
             services.AddSwaggerGen(SetSwaggerOption);
