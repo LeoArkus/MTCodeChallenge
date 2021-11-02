@@ -26,7 +26,7 @@ namespace Engine.ArchitecturePattern
             to be either valid or contains an error, then passes it to the View which its unique task is to build the response in a readable form (HTML,CSS etc)
             and return it to the controller which final task is to show this view to the user."},
             { ArchitecturePatternTypeEnum.Hexagonal , @"Also known as ports and adapters or beehive, in summary this architecture divides the application in ports
-            and different layers, which first layer has to be the domain, entities, repositories, then the business logic, then the controllers, and with the particularity that the
+            and different layers, which first layer has to be the domain, entities, then the business logic, then the ports (controllers, external api, database), and with the particularity that the
             layers in the bottom (inner layers) doesn't know anything (they are not referenced to each other) of the outer layers. Thanks to this it has a great flexibility in 
             terms of replaceability."}
         };  
