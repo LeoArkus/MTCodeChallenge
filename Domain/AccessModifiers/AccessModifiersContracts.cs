@@ -1,9 +1,11 @@
 using System.Collections.Generic;
+using Commons;
 
 namespace Domain.AccessModifiers
 {
     public interface IProcessAccessModifiers
     {
-        List<string> ReadAccessModifiersInfo();
+        CommandResult<ErrorCode> ReadAccessModifiersInfo(AccessModifiersTypeEnum accessModifiersTypeEnum);
+        Optional<string> ReadResultInfo();
     }
 }
