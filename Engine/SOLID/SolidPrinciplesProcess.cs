@@ -25,7 +25,7 @@ namespace Engine.SOLID
             {SolidPrinciplesTypes.SingleResponsibility, "SRP: 'A class should have only one reason to change.'"},
             {SolidPrinciplesTypes.OpenClose,"OCP: 'Software entities should be open for extension but closed for modification.'"},
             {SolidPrinciplesTypes.LiskovSubstitution,"LSK: 'If S is subtype of T, objects of type T should be replaceable with objects of type S without altering the program/result.'"},
-            {SolidPrinciplesTypes.InterfaceSegregation,"ISP: 'Clients should not be forced to depend on methods they do not us.e'"},
+            {SolidPrinciplesTypes.InterfaceSegregation,"ISP: 'Clients should not be forced to depend on methods they do not use.'"},
             { SolidPrinciplesTypes.DependencyInversion, @"DIP: High level modules, should not depend on low level modules. Both should depend on abstractions. 
             Abstractions should not depend on details. Details should not depend on abstractions."}
         };
