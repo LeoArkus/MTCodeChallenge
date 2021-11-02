@@ -1,0 +1,88 @@
+{
+  "version": 3,
+  "targets": {
+    "net5.0": {
+      "Commons/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/Commons.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Commons.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Commons/1.0.0": {
+      "type": "project",
+      "path": "../Commons/Commons.csproj",
+      "msbuildProject": "../Commons/Commons.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net5.0": [
+      "Commons >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "/home/leo/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/home/leo/MindTeams/MTCodeChallenge/Domain/Domain.csproj",
+      "projectName": "Domain",
+      "projectPath": "/home/leo/MindTeams/MTCodeChallenge/Domain/Domain.csproj",
+      "packagesPath": "/home/leo/.nuget/packages/",
+      "outputPath": "/home/leo/MindTeams/MTCodeChallenge/Domain/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/home/leo/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net5.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "projectReferences": {
+            "/home/leo/MindTeams/MTCodeChallenge/Commons/Commons.csproj": {
+              "projectPath": "/home/leo/MindTeams/MTCodeChallenge/Commons/Commons.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net5.0": {
+        "targetAlias": "net5.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.402/RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
