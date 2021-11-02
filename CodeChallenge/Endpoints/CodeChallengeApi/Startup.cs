@@ -27,6 +27,7 @@ namespace Endpoints
             services.AddScoped<IBootstrapCodeReview, BootstrapCodeReview>();
             services.AddScoped<IBootstrapAccessModifiers, BootstrapAccessModifiers>();
             services.AddScoped<IBootstrapArchitecturePattern, BootstrapArchitecturePattern>();
+            services.AddScoped<IBootstrapDesignPattern, BootstrapDesignPattern>();
 
             services.AddControllers().AddJsonOptions(options => options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter()));
             services.AddSwaggerGen(SetSwaggerOption);
