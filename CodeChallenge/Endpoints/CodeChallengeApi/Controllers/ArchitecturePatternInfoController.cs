@@ -15,8 +15,7 @@ namespace Endpoints.Controllers
 
         [HttpGet]
         public IActionResult ArchitecturePatternInfo(ArchitecturePatternTypeEnum architecturePatternTypeEnum) =>
-            _process.ArchitecturePatternInfoProcess(architecturePatternTypeEnum).
-                AndThen(OnSuccess, OnError);
+            _process.ArchitecturePatternInfoProcess(architecturePatternTypeEnum).AndThen(OnSuccess, OnError);
 
         private IActionResult OnError(ErrorCode errorCode) => BadRequest(errorCode);
 
