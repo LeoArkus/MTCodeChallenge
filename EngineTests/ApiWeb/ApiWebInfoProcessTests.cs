@@ -20,8 +20,10 @@ namespace EngineTests.ApiWeb
         {
             var subject = new ApiWebProcess();
             var result = subject.ProcessApiWebInfo(ApiWebInfoEnum.ApiWebException);
-            Assert.True(!result.IsSuccess());
-            result.Errors().AndThen(x => Assert.Equal(x.ErrorNum, ApiWebInfoErrors.InvalidApiWebTypeEnum.ErrorNum), () => Assert.True(true));
+            Assert.False(result.IsSuccess());
+            Assert.False(result.Errors().IsNothing());
+            result.Errors().AndThen(x => 
+                Assert.Equal(x.ErrorNum, ApiWebInfoErrors.InvalidApiWebTypeEnum.ErrorNum), () => Assert.True(true));
         }
     }
 }
