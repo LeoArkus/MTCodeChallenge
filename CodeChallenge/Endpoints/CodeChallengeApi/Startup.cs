@@ -13,7 +13,7 @@ namespace Endpoints
 {
     public class Startup
     {
-        private const string TitleApi = "MT Code Challenge Api";
+        private const string TitleApi = "MT Code Challenge Api .NET 7";
         private const string VersionTag = "v1";
 
         public Startup(IConfiguration configuration) => Configuration = configuration;
